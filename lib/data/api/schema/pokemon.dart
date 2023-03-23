@@ -19,4 +19,9 @@ abstract class PokemonSchema {
     @Query("limit") int limit,
     @Query("offset") int offset
   );
+
+  @GET("/api/v2/pokemon/{id}")
+  Future<PokemonDetailResponse> getPokemonById(
+    @Path("id") int pokemonId
+  );
 }

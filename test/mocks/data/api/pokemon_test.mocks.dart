@@ -31,6 +31,17 @@ class _FakePokemonListResponse_0 extends _i1.SmartFake
         );
 }
 
+class _FakePokemonDetailResponse_1 extends _i1.SmartFake
+    implements _i2.PokemonDetailResponse {
+  _FakePokemonDetailResponse_1(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
+}
+
 /// A class which mocks [PokemonSchema].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -64,4 +75,20 @@ class MockPokemonSchema extends _i1.Mock implements _i3.PokemonSchema {
           ),
         )),
       ) as _i4.Future<_i2.PokemonListResponse>);
+  @override
+  _i4.Future<_i2.PokemonDetailResponse> getPokemonById(int? pokemonId) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getPokemonById,
+          [pokemonId],
+        ),
+        returnValue: _i4.Future<_i2.PokemonDetailResponse>.value(
+            _FakePokemonDetailResponse_1(
+          this,
+          Invocation.method(
+            #getPokemonById,
+            [pokemonId],
+          ),
+        )),
+      ) as _i4.Future<_i2.PokemonDetailResponse>);
 }

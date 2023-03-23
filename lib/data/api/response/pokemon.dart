@@ -22,3 +22,26 @@ class PokemonListResultResponse with _$PokemonListResultResponse {
 
   factory PokemonListResultResponse.fromJson(Map<String, dynamic> json) => _$PokemonListResultResponseFromJson(json);
 }
+
+
+@freezed
+class PokemonDetailResponse with _$PokemonDetailResponse {
+  factory PokemonDetailResponse({
+    required int id,
+    required String name,
+    required int height,
+    required int weight,
+    required PokemonDetailSpriteResponse sprites
+  }) = _PokemonDetailResponse;
+
+  factory PokemonDetailResponse.fromJson(Map<String, dynamic> json) => _$PokemonDetailResponseFromJson(json);
+}
+
+@freezed
+class PokemonDetailSpriteResponse with _$PokemonDetailSpriteResponse {
+  factory PokemonDetailSpriteResponse({
+    required Map<String, Map<String, String> > other
+  }) = _PokemonDetailSpriteResponse;
+
+  factory PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) => _$PokemonDetailSpriteResponseFromJson(json);
+}

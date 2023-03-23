@@ -34,3 +34,38 @@ Map<String, dynamic> _$$_PokemonListResultResponseToJson(
       'name': instance.name,
       'url': instance.url,
     };
+
+_$_PokemonDetailResponse _$$_PokemonDetailResponseFromJson(
+        Map<String, dynamic> json) =>
+    _$_PokemonDetailResponse(
+      id: json['id'] as int,
+      name: json['name'] as String,
+      height: json['height'] as int,
+      weight: json['weight'] as int,
+      sprites: PokemonDetailSpriteResponse.fromJson(
+          json['sprites'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_PokemonDetailResponseToJson(
+        _$_PokemonDetailResponse instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'height': instance.height,
+      'weight': instance.weight,
+      'sprites': instance.sprites,
+    };
+
+_$_PokemonDetailSpriteResponse _$$_PokemonDetailSpriteResponseFromJson(
+        Map<String, dynamic> json) =>
+    _$_PokemonDetailSpriteResponse(
+      other: (json['other'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Map<String, String>.from(e as Map)),
+      ),
+    );
+
+Map<String, dynamic> _$$_PokemonDetailSpriteResponseToJson(
+        _$_PokemonDetailSpriteResponse instance) =>
+    <String, dynamic>{
+      'other': instance.other,
+    };
