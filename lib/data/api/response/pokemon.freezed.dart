@@ -602,7 +602,7 @@ PokemonDetailSpriteResponse _$PokemonDetailSpriteResponseFromJson(
 
 /// @nodoc
 mixin _$PokemonDetailSpriteResponse {
-  Map<String, Map<String, String>> get other =>
+  Map<String, Map<String, String?>> get other =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -619,7 +619,7 @@ abstract class $PokemonDetailSpriteResponseCopyWith<$Res> {
       _$PokemonDetailSpriteResponseCopyWithImpl<$Res,
           PokemonDetailSpriteResponse>;
   @useResult
-  $Res call({Map<String, Map<String, String>> other});
+  $Res call({Map<String, Map<String, String?>> other});
 }
 
 /// @nodoc
@@ -642,7 +642,7 @@ class _$PokemonDetailSpriteResponseCopyWithImpl<$Res,
       other: null == other
           ? _value.other
           : other // ignore: cast_nullable_to_non_nullable
-              as Map<String, Map<String, String>>,
+              as Map<String, Map<String, String?>>,
     ) as $Val);
   }
 }
@@ -656,7 +656,7 @@ abstract class _$$_PokemonDetailSpriteResponseCopyWith<$Res>
       __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, Map<String, String>> other});
+  $Res call({Map<String, Map<String, String?>> other});
 }
 
 /// @nodoc
@@ -678,7 +678,7 @@ class __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>
       other: null == other
           ? _value._other
           : other // ignore: cast_nullable_to_non_nullable
-              as Map<String, Map<String, String>>,
+              as Map<String, Map<String, String?>>,
     ));
   }
 }
@@ -689,15 +689,15 @@ class _$_PokemonDetailSpriteResponse
     with DiagnosticableTreeMixin
     implements _PokemonDetailSpriteResponse {
   _$_PokemonDetailSpriteResponse(
-      {required final Map<String, Map<String, String>> other})
+      {required final Map<String, Map<String, String?>> other})
       : _other = other;
 
   factory _$_PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) =>
       _$$_PokemonDetailSpriteResponseFromJson(json);
 
-  final Map<String, Map<String, String>> _other;
+  final Map<String, Map<String, String?>> _other;
   @override
-  Map<String, Map<String, String>> get other {
+  Map<String, Map<String, String?>> get other {
     if (_other is EqualUnmodifiableMapView) return _other;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_other);
@@ -747,14 +747,14 @@ class _$_PokemonDetailSpriteResponse
 abstract class _PokemonDetailSpriteResponse
     implements PokemonDetailSpriteResponse {
   factory _PokemonDetailSpriteResponse(
-          {required final Map<String, Map<String, String>> other}) =
+          {required final Map<String, Map<String, String?>> other}) =
       _$_PokemonDetailSpriteResponse;
 
   factory _PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) =
       _$_PokemonDetailSpriteResponse.fromJson;
 
   @override
-  Map<String, Map<String, String>> get other;
+  Map<String, Map<String, String?>> get other;
   @override
   @JsonKey(ignore: true)
   _$$_PokemonDetailSpriteResponseCopyWith<_$_PokemonDetailSpriteResponse>

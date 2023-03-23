@@ -40,7 +40,7 @@ class PokemonDetailResponse with _$PokemonDetailResponse {
 @freezed
 class PokemonDetailSpriteResponse with _$PokemonDetailSpriteResponse {
   factory PokemonDetailSpriteResponse({
-    required Map<String, Map<String, String> > other
+    required Map<String, Map<String, String?> > other
   }) = _PokemonDetailSpriteResponse;
 
   factory PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) => _$PokemonDetailSpriteResponseFromJson(json);

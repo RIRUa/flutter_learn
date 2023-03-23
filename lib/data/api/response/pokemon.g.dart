@@ -60,7 +60,7 @@ _$_PokemonDetailSpriteResponse _$$_PokemonDetailSpriteResponseFromJson(
         Map<String, dynamic> json) =>
     _$_PokemonDetailSpriteResponse(
       other: (json['other'] as Map<String, dynamic>).map(
-        (k, e) => MapEntry(k, Map<String, String>.from(e as Map)),
+        (k, e) => MapEntry(k, Map<String, String?>.from(e as Map)),
       ),
     );
 
