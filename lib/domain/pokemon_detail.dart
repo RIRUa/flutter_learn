@@ -33,7 +33,10 @@ class PokemonDetailUseCase extends UseCase< PokemonDetailUseCaseParam, Future< P
       pokemon.sprites.other.forEach((_, value) {
         value.forEach((_, value) {
           if (value != null) {
-            imagePaths.add(value);
+            // svgファイルを除外
+            if (!value.endsWith("svg")) {
+              imagePaths.add(value);
+            }
           }
         });
       },);
