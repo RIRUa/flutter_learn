@@ -3,16 +3,27 @@ import 'package:flutter_learn/domain/pokemon_detail.dart';
 import 'package:flutter_learn/model/pokemon_detail.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final pokemonDetailStateProvider = StateNotifierProvider<PokemonDetailState, AsyncValue<PokemonDetail>>((ref) {
-  return PokemonDetailState(ref.watch(pokemonDetailUseCaseProvider));
+final pokemonDetailStateProvider = StateNotifierProvider.autoDispose.family<
+  PokemonDetailState, 
+  AsyncValue<PokemonDetail>,
+  int
+>((ref, pokemonId) {
+  return PokemonDetailState(
+    pokemonDetailUseCase: ref.watch(pokemonDetailUseCaseProvider), 
+    pokemonId: pokemonId
+  );
 });
 
 class PokemonDetailState extends StateNotifier<AsyncValue<PokemonDetail>> {
-  PokemonDetailUseCase pokemonDetailUseCase;
+  final PokemonDetailUseCase pokemonDetailUseCase;
+  final int pokemonId;
 
-  PokemonDetailState(this.pokemonDetailUseCase): super(const AsyncValue.loading());
+  PokemonDetailState({
+    required this.pokemonDetailUseCase,
+    required this.pokemonId
+  }): super(const AsyncValue.loading());
 
-  Future<void> fetchPokemonDetailByID({required int pokemonId}) async {
+  Future<void> fetchPokemonDetailByID() async {
     try {
       final pokemon = await pokemonDetailUseCase.call(PokemonDetailUseCaseParam(pokemonId: pokemonId));
       state = AsyncValue.data(pokemon);

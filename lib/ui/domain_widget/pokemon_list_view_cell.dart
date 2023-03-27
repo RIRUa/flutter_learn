@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/model/pokemon_list.dart';
+import 'package:flutter_learn/router/router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PokemonListViewCell extends HookConsumerWidget {
-  const PokemonListViewCell(this.index, this.pokemon, {super.key});
+  const PokemonListViewCell({
+    required this.index, 
+    required this.pokemon,
+    super.key
+  });
 
   final int index;
   final PokemonNameAndUrl pokemon;

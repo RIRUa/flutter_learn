@@ -3,7 +3,11 @@ import 'package:flutter_learn/domain/pokemon_list.dart';
 import 'package:flutter_learn/model/pokemon_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final pokemonListStateProvider = StateNotifierProvider<PokemonListState, AsyncValue<List<PokemonNameAndUrl>>>((ref) {
+final pokemonListStateProvider = StateNotifierProvider.autoDispose.family<
+  PokemonListState, 
+  AsyncValue< List<PokemonNameAndUrl> >,
+  void
+>((ref, _) {
   return PokemonListState(ref.watch(pokemonListUseCaseProvider));
 });
 

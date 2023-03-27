@@ -10,7 +10,7 @@ import '../../mocks/domain/pokemon_detail_test.mocks.dart';
 void main() {
   group("state/pokemon_detail.dartのテスト", () {
     MockPokemonDetailUseCase pokemonDetailUseCase = MockPokemonDetailUseCase();
-    PokemonDetailState pokemonDetailState = PokemonDetailState(pokemonDetailUseCase);
+    PokemonDetailState pokemonDetailState = PokemonDetailState(pokemonDetailUseCase: pokemonDetailUseCase, pokemonId: 1);
 
     setUp(() {
       when(pokemonDetailUseCase.call(argThat(isA<PokemonDetailUseCaseParam>())))
@@ -36,7 +36,7 @@ void main() {
     });
 
     test("正常", () async {
-      await pokemonDetailState.fetchPokemonDetailByID(pokemonId: 1);
+      await pokemonDetailState.fetchPokemonDetailByID();
       expect(
         pokemonDetailState.debugState.value,
         const PokemonDetail(

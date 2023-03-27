@@ -1,29 +1,39 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_learn/ui/domain_widget/center_circular_progress_indicator.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import 'package:flutter_learn/state/pokemon_detail.dart';
 
-class PokemonDetailStatefulPage extends HookConsumerWidget {
+class PokemonDetailView extends HookConsumerWidget {
   final int pokemonId;
 
-  const PokemonDetailStatefulPage(this.pokemonId, {super.key});
+  const PokemonDetailView(this.pokemonId, {super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pokemonDetailState = ref.watch(pokemonDetailStateProvider);
-    final pokemonDetailStateNotifier = ref.watch(pokemonDetailStateProvider.notifier);
+    final pokemonDetailState = ref.watch(pokemonDetailStateProvider(pokemonId));
+    final pokemonDetailStateNotifier = ref.watch(pokemonDetailStateProvider(pokemonId).notifier);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-        pokemonDetailStateNotifier.fetchPokemonDetailByID(pokemonId: pokemonId);
+        pokemonDetailStateNotifier.fetchPokemonDetailByID();
       });
-      return pokemonDetailStateNotifier.dispose;
+      return;
     }, const []);
 
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            GoRouter.of(context).pop();
+          },
+        ),
+      ),
       body: SafeArea(
         child: Center(
           child: pokemonDetailState.when(
@@ -119,7 +129,7 @@ class PokemonDetailStatefulPage extends HookConsumerWidget {
                           ]
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               );
