@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_learn/ui/domain_widget/center_circular_progress_indicator.dart';
@@ -12,7 +10,10 @@ import 'package:flutter_learn/state/pokemon_detail.dart';
 class PokemonDetailView extends HookConsumerWidget {
   final int pokemonId;
 
-  const PokemonDetailView(this.pokemonId, {super.key});
+  const PokemonDetailView({
+    required this.pokemonId,
+    super.key
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

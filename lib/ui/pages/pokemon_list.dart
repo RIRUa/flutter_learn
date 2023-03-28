@@ -9,7 +9,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class PokemonListView extends HookConsumerWidget {
-  const PokemonListView({super.key});
+  const PokemonListView({
+    super.key
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -9,7 +9,7 @@ import '../../mocks/domain/pokemon_list_test.mocks.dart';
 void main() {
   group('state/pokemon_list.dartのテスト', () {
     MockPokemonListUseCase pokemonListUseCase = MockPokemonListUseCase();
-    PokemonListState pokemonListState = PokemonListState(pokemonListUseCase);
+    PokemonListState pokemonListState = PokemonListState(pokemonListUseCase: pokemonListUseCase);
 
     List<PokemonNameAndUrl> pokemonNameAndUrl = List<PokemonNameAndUrl>.generate(160, (index) {
       return PokemonNameAndUrl(name: "pokemon$index", url: "url$index");

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/router/router.dart';
+import 'package:flutter_learn/router/route.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class MyApp extends StatelessWidget {

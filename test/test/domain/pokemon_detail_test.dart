@@ -3,7 +3,6 @@ import 'package:flutter_learn/domain/pokemon_detail.dart';
 import 'package:flutter_learn/model/pokemon_detail.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:mockito/annotations.dart';
 
 import '../../mocks/data/api/pokemon_test.mocks.dart';
 

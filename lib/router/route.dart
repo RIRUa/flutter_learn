@@ -25,7 +25,7 @@ final router = GoRouter(
 
         return MaterialPage(
           key: state.pageKey,
-          child: PokemonDetailView(pokemonId)
+          child: PokemonDetailView(pokemonId: pokemonId)
         );
       },
     )

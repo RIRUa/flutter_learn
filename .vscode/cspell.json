@@ -1,0 +1,13 @@
+{
+    "words": [
+        "cupertino",
+        "riverpod",
+        "sublist"
+    ],
+    "ignorePaths": [
+        ".vscode",
+        "**.freezed.dart",
+        "**.g.dart",
+        "**.mocks.dart"
+    ]
+}

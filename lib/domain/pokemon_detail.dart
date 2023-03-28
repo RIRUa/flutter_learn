@@ -1,7 +1,5 @@
-import 'package:flutter_learn/data/api/response/pokemon.dart';
 import 'package:flutter_learn/data/api/schema/pokemon.dart';
 import 'package:flutter_learn/model/pokemon_detail.dart';
-import 'package:flutter_learn/model/pokemon_list.dart';
 import 'package:flutter_learn/resources/use_case.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

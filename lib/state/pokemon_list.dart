@@ -8,7 +8,7 @@ final pokemonListStateProvider = StateNotifierProvider.autoDispose.family<
   AsyncValue< List<PokemonNameAndUrl> >,
   void
 >((ref, _) {
-  return PokemonListState(ref.watch(pokemonListUseCaseProvider));
+  return PokemonListState(pokemonListUseCase: ref.watch(pokemonListUseCaseProvider));
 });
 
 class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>> {
@@ -23,7 +23,7 @@ class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>
   // 追加でAPIを呼び出すことが可能か
   late bool isCallable;
 
-  PokemonListState(this.pokemonListUseCase) : super(const AsyncValue.loading()) {
+  PokemonListState({required this.pokemonListUseCase}) : super(const AsyncValue.loading()) {
     limit = 30;
     offset = 0;
     isCalling = false;
@@ -41,7 +41,6 @@ class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>
     }
 
     try {
-      print("limit: ${limit}, offset: $offset");
       isCalling = true;
       final additionalPokemonList = await pokemonListUseCase.call(PokemonListUseCaseParam(limit: limit, offset: offset));
 

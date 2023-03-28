@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/model/pokemon_list.dart';
-import 'package:flutter_learn/router/router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PokemonListViewCell extends HookConsumerWidget {
-  const PokemonListViewCell({
-    required this.index, 
-    required this.pokemon,
-    super.key
-  });
+  const PokemonListViewCell(
+      {required this.index, required this.pokemon, super.key});
 
   final int index;
   final PokemonNameAndUrl pokemon;
@@ -18,20 +14,19 @@ class PokemonListViewCell extends HookConsumerWidget {
     return SizedBox(
       height: 50.0,
       child: Center(
-        child: Row(
-          children: [
-            Text(
-              "No: ${index + 1}",
-              style: const TextStyle(fontSize: 30),
-            ),
-            Container(width: 20),
-            Text(
-              pokemon.name,
-              style: const TextStyle(fontSize: 30),
-            ),
-          ],
-        )
-      ),
+          child: Row(
+        children: [
+          Text(
+            "No: ${index + 1}",
+            style: const TextStyle(fontSize: 30),
+          ),
+          Container(width: 20),
+          Text(
+            pokemon.name,
+            style: const TextStyle(fontSize: 30),
+          ),
+        ],
+      )),
     );
   }
 }
