@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import 'package:flutter_learn/core/constants/urls.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final myDioProvider = Provider((ref) {
@@ -11,7 +12,7 @@ final myDioProvider = Provider((ref) {
 class MyDio with DioMixin implements Dio {
   @override
   set options(BaseOptions options) {
-    options.baseUrl = "https://pokeapi.co";
+    options.baseUrl = Endpoint;
     options.headers = {
       "Content-Type": "application/json"
     };

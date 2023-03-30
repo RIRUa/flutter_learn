@@ -1,12 +1,12 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_learn/state/pokemon_list.dart';
 import 'package:flutter_learn/ui/domain_widget/center_circular_progress_indicator.dart';
 import 'package:flutter_learn/ui/domain_widget/pokemon_list_view_cell.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 
 class PokemonListView extends HookConsumerWidget {
   const PokemonListView({
