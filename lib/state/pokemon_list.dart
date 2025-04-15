@@ -1,17 +1,16 @@
-
 import 'package:flutter_learn/domain/pokemon_list.dart';
 import 'package:flutter_learn/model/pokemon_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final pokemonListStateProvider = StateNotifierProvider.autoDispose.family<
-  PokemonListState, 
-  AsyncValue< List<PokemonNameAndUrl> >,
-  void
->((ref, _) {
-  return PokemonListState(pokemonListUseCase: ref.watch(pokemonListUseCaseProvider));
+final pokemonListStateProvider = StateNotifierProvider.autoDispose<
+    PokemonListState, AsyncValue<List<PokemonNameAndUrl>>>((ref) {
+  return PokemonListState(
+    pokemonListUseCase: ref.watch(pokemonListUseCaseProvider),
+  );
 });
 
-class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>> {
+class PokemonListState
+    extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>> {
   PokemonListUseCase pokemonListUseCase;
 
   late int limit;
@@ -23,7 +22,8 @@ class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>
   // 追加でAPIを呼び出すことが可能か
   late bool isCallable;
 
-  PokemonListState({required this.pokemonListUseCase}) : super(const AsyncValue.loading()) {
+  PokemonListState({required this.pokemonListUseCase})
+      : super(const AsyncValue.loading()) {
     limit = 30;
     offset = 0;
     isCalling = false;
@@ -42,7 +42,8 @@ class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>
 
     try {
       isCalling = true;
-      final additionalPokemonList = await pokemonListUseCase.call(PokemonListUseCaseParam(limit: limit, offset: offset));
+      final additionalPokemonList = await pokemonListUseCase
+          .call(PokemonListUseCaseParam(limit: limit, offset: offset));
 
       final pokemonList = [...?state.value, ...additionalPokemonList];
       state = AsyncValue.data(pokemonList);
@@ -68,5 +69,4 @@ class PokemonListState extends StateNotifier<AsyncValue<List<PokemonNameAndUrl>>
 
     await getPokemonList();
   }
-
 }
