@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_learn/state/pokemon_list.dart';
-import 'package:flutter_learn/ui/domain_widget/center_circular_progress_indicator.dart';
-import 'package:flutter_learn/ui/part/pokemon_list_view_cell.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_learn/ui/base/center_circular_progress_indicator.dart';
+import 'package:flutter_learn/ui/frame/pokemon_list/pokemon_list_frame.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PokemonListView extends HookConsumerWidget {
@@ -18,7 +17,7 @@ class PokemonListView extends HookConsumerWidget {
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-        pokemonListStateNotifier.getPokemonList();
+        pokemonListStateNotifier.initPokemonList();
       });
       return;
     }, const []);
@@ -40,20 +39,9 @@ class PokemonListView extends HookConsumerWidget {
           },
           child: pokemonListState.when(
             data: (pokemonNameAndUrlList) {
-              return ListView.separated(
-                controller: scrollController,
-                separatorBuilder: (context, index) => const Divider(),
-                itemCount: pokemonNameAndUrlList.length,
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: () {
-                      int pokemonId = index + 1;
-                      GoRouter.of(context).push("/pokemon/$pokemonId");
-                    },
-                    child: PokemonListViewCell(
-                        index: index, pokemon: pokemonNameAndUrlList[index]),
-                  );
-                },
+              return PokemonListFrame(
+                pokemonList: pokemonNameAndUrlList,
+                scrollController: scrollController,
               );
             },
             error: (exception, _) {
