@@ -12,7 +12,7 @@ part of 'pokemon_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PokemonListUseCaseParam {
@@ -64,23 +64,25 @@ class _$PokemonListUseCaseParamCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PokemonListUseCaseParamCopyWith<$Res>
+abstract class _$$PokemonListUseCaseParamImplCopyWith<$Res>
     implements $PokemonListUseCaseParamCopyWith<$Res> {
-  factory _$$_PokemonListUseCaseParamCopyWith(_$_PokemonListUseCaseParam value,
-          $Res Function(_$_PokemonListUseCaseParam) then) =
-      __$$_PokemonListUseCaseParamCopyWithImpl<$Res>;
+  factory _$$PokemonListUseCaseParamImplCopyWith(
+          _$PokemonListUseCaseParamImpl value,
+          $Res Function(_$PokemonListUseCaseParamImpl) then) =
+      __$$PokemonListUseCaseParamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int limit, int offset});
 }
 
 /// @nodoc
-class __$$_PokemonListUseCaseParamCopyWithImpl<$Res>
+class __$$PokemonListUseCaseParamImplCopyWithImpl<$Res>
     extends _$PokemonListUseCaseParamCopyWithImpl<$Res,
-        _$_PokemonListUseCaseParam>
-    implements _$$_PokemonListUseCaseParamCopyWith<$Res> {
-  __$$_PokemonListUseCaseParamCopyWithImpl(_$_PokemonListUseCaseParam _value,
-      $Res Function(_$_PokemonListUseCaseParam) _then)
+        _$PokemonListUseCaseParamImpl>
+    implements _$$PokemonListUseCaseParamImplCopyWith<$Res> {
+  __$$PokemonListUseCaseParamImplCopyWithImpl(
+      _$PokemonListUseCaseParamImpl _value,
+      $Res Function(_$PokemonListUseCaseParamImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +91,7 @@ class __$$_PokemonListUseCaseParamCopyWithImpl<$Res>
     Object? limit = null,
     Object? offset = null,
   }) {
-    return _then(_$_PokemonListUseCaseParam(
+    return _then(_$PokemonListUseCaseParamImpl(
       limit: null == limit
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
@@ -104,8 +106,8 @@ class __$$_PokemonListUseCaseParamCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PokemonListUseCaseParam implements _PokemonListUseCaseParam {
-  _$_PokemonListUseCaseParam({required this.limit, required this.offset});
+class _$PokemonListUseCaseParamImpl implements _PokemonListUseCaseParam {
+  _$PokemonListUseCaseParamImpl({required this.limit, required this.offset});
 
   @override
   final int limit;
@@ -118,10 +120,10 @@ class _$_PokemonListUseCaseParam implements _PokemonListUseCaseParam {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonListUseCaseParam &&
+            other is _$PokemonListUseCaseParamImpl &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.offset, offset) || other.offset == offset));
   }
@@ -132,16 +134,15 @@ class _$_PokemonListUseCaseParam implements _PokemonListUseCaseParam {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonListUseCaseParamCopyWith<_$_PokemonListUseCaseParam>
-      get copyWith =>
-          __$$_PokemonListUseCaseParamCopyWithImpl<_$_PokemonListUseCaseParam>(
-              this, _$identity);
+  _$$PokemonListUseCaseParamImplCopyWith<_$PokemonListUseCaseParamImpl>
+      get copyWith => __$$PokemonListUseCaseParamImplCopyWithImpl<
+          _$PokemonListUseCaseParamImpl>(this, _$identity);
 }
 
 abstract class _PokemonListUseCaseParam implements PokemonListUseCaseParam {
   factory _PokemonListUseCaseParam(
       {required final int limit,
-      required final int offset}) = _$_PokemonListUseCaseParam;
+      required final int offset}) = _$PokemonListUseCaseParamImpl;
 
   @override
   int get limit;
@@ -149,6 +150,6 @@ abstract class _PokemonListUseCaseParam implements PokemonListUseCaseParam {
   int get offset;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonListUseCaseParamCopyWith<_$_PokemonListUseCaseParam>
+  _$$PokemonListUseCaseParamImplCopyWith<_$PokemonListUseCaseParamImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,48 +6,48 @@ part of 'pokemon.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PokemonListResponse _$$_PokemonListResponseFromJson(
+_$PokemonListResponseImpl _$$PokemonListResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PokemonListResponse(
+    _$PokemonListResponseImpl(
       results: (json['results'] as List<dynamic>)
           .map((e) =>
               PokemonListResultResponse.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_PokemonListResponseToJson(
-        _$_PokemonListResponse instance) =>
+Map<String, dynamic> _$$PokemonListResponseImplToJson(
+        _$PokemonListResponseImpl instance) =>
     <String, dynamic>{
       'results': instance.results,
     };
 
-_$_PokemonListResultResponse _$$_PokemonListResultResponseFromJson(
+_$PokemonListResultResponseImpl _$$PokemonListResultResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PokemonListResultResponse(
+    _$PokemonListResultResponseImpl(
       name: json['name'] as String,
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$_PokemonListResultResponseToJson(
-        _$_PokemonListResultResponse instance) =>
+Map<String, dynamic> _$$PokemonListResultResponseImplToJson(
+        _$PokemonListResultResponseImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
     };
 
-_$_PokemonDetailResponse _$$_PokemonDetailResponseFromJson(
+_$PokemonDetailResponseImpl _$$PokemonDetailResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PokemonDetailResponse(
-      id: json['id'] as int,
+    _$PokemonDetailResponseImpl(
+      id: (json['id'] as num).toInt(),
       name: json['name'] as String,
-      height: json['height'] as int,
-      weight: json['weight'] as int,
+      height: (json['height'] as num).toInt(),
+      weight: (json['weight'] as num).toInt(),
       sprites: PokemonDetailSpriteResponse.fromJson(
           json['sprites'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PokemonDetailResponseToJson(
-        _$_PokemonDetailResponse instance) =>
+Map<String, dynamic> _$$PokemonDetailResponseImplToJson(
+        _$PokemonDetailResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -56,16 +56,16 @@ Map<String, dynamic> _$$_PokemonDetailResponseToJson(
       'sprites': instance.sprites,
     };
 
-_$_PokemonDetailSpriteResponse _$$_PokemonDetailSpriteResponseFromJson(
+_$PokemonDetailSpriteResponseImpl _$$PokemonDetailSpriteResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PokemonDetailSpriteResponse(
+    _$PokemonDetailSpriteResponseImpl(
       other: (json['other'] as Map<String, dynamic>).map(
         (k, e) => MapEntry(k, Map<String, String?>.from(e as Map)),
       ),
     );
 
-Map<String, dynamic> _$$_PokemonDetailSpriteResponseToJson(
-        _$_PokemonDetailSpriteResponse instance) =>
+Map<String, dynamic> _$$PokemonDetailSpriteResponseImplToJson(
+        _$PokemonDetailSpriteResponseImpl instance) =>
     <String, dynamic>{
       'other': instance.other,
     };

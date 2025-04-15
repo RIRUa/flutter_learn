@@ -12,7 +12,7 @@ part of 'pokemon_detail.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PokemonDetail {
@@ -82,11 +82,11 @@ class _$PokemonDetailCopyWithImpl<$Res, $Val extends PokemonDetail>
 }
 
 /// @nodoc
-abstract class _$$_PokemonDetailCopyWith<$Res>
+abstract class _$$PokemonDetailImplCopyWith<$Res>
     implements $PokemonDetailCopyWith<$Res> {
-  factory _$$_PokemonDetailCopyWith(
-          _$_PokemonDetail value, $Res Function(_$_PokemonDetail) then) =
-      __$$_PokemonDetailCopyWithImpl<$Res>;
+  factory _$$PokemonDetailImplCopyWith(
+          _$PokemonDetailImpl value, $Res Function(_$PokemonDetailImpl) then) =
+      __$$PokemonDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,11 +94,11 @@ abstract class _$$_PokemonDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PokemonDetailCopyWithImpl<$Res>
-    extends _$PokemonDetailCopyWithImpl<$Res, _$_PokemonDetail>
-    implements _$$_PokemonDetailCopyWith<$Res> {
-  __$$_PokemonDetailCopyWithImpl(
-      _$_PokemonDetail _value, $Res Function(_$_PokemonDetail) _then)
+class __$$PokemonDetailImplCopyWithImpl<$Res>
+    extends _$PokemonDetailCopyWithImpl<$Res, _$PokemonDetailImpl>
+    implements _$$PokemonDetailImplCopyWith<$Res> {
+  __$$PokemonDetailImplCopyWithImpl(
+      _$PokemonDetailImpl _value, $Res Function(_$PokemonDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +110,7 @@ class __$$_PokemonDetailCopyWithImpl<$Res>
     Object? weight = null,
     Object? imagePaths = null,
   }) {
-    return _then(_$_PokemonDetail(
+    return _then(_$PokemonDetailImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -137,8 +137,8 @@ class __$$_PokemonDetailCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PokemonDetail implements _PokemonDetail {
-  const _$_PokemonDetail(
+class _$PokemonDetailImpl implements _PokemonDetail {
+  const _$PokemonDetailImpl(
       {required this.id,
       required this.name,
       required this.height,
@@ -168,10 +168,10 @@ class _$_PokemonDetail implements _PokemonDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonDetail &&
+            other is _$PokemonDetailImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.height, height) || other.height == height) &&
@@ -187,8 +187,8 @@ class _$_PokemonDetail implements _PokemonDetail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonDetailCopyWith<_$_PokemonDetail> get copyWith =>
-      __$$_PokemonDetailCopyWithImpl<_$_PokemonDetail>(this, _$identity);
+  _$$PokemonDetailImplCopyWith<_$PokemonDetailImpl> get copyWith =>
+      __$$PokemonDetailImplCopyWithImpl<_$PokemonDetailImpl>(this, _$identity);
 }
 
 abstract class _PokemonDetail implements PokemonDetail {
@@ -197,7 +197,7 @@ abstract class _PokemonDetail implements PokemonDetail {
       required final String name,
       required final int height,
       required final int weight,
-      required final List<String> imagePaths}) = _$_PokemonDetail;
+      required final List<String> imagePaths}) = _$PokemonDetailImpl;
 
   @override
   int get id;
@@ -211,6 +211,6 @@ abstract class _PokemonDetail implements PokemonDetail {
   List<String> get imagePaths;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonDetailCopyWith<_$_PokemonDetail> get copyWith =>
+  _$$PokemonDetailImplCopyWith<_$PokemonDetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

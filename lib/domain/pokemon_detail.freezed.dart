@@ -12,7 +12,7 @@ part of 'pokemon_detail.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PokemonDetailUseCaseParam {
@@ -58,25 +58,25 @@ class _$PokemonDetailUseCaseParamCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PokemonDetailUseCaseParamCopyWith<$Res>
+abstract class _$$PokemonDetailUseCaseParamImplCopyWith<$Res>
     implements $PokemonDetailUseCaseParamCopyWith<$Res> {
-  factory _$$_PokemonDetailUseCaseParamCopyWith(
-          _$_PokemonDetailUseCaseParam value,
-          $Res Function(_$_PokemonDetailUseCaseParam) then) =
-      __$$_PokemonDetailUseCaseParamCopyWithImpl<$Res>;
+  factory _$$PokemonDetailUseCaseParamImplCopyWith(
+          _$PokemonDetailUseCaseParamImpl value,
+          $Res Function(_$PokemonDetailUseCaseParamImpl) then) =
+      __$$PokemonDetailUseCaseParamImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int pokemonId});
 }
 
 /// @nodoc
-class __$$_PokemonDetailUseCaseParamCopyWithImpl<$Res>
+class __$$PokemonDetailUseCaseParamImplCopyWithImpl<$Res>
     extends _$PokemonDetailUseCaseParamCopyWithImpl<$Res,
-        _$_PokemonDetailUseCaseParam>
-    implements _$$_PokemonDetailUseCaseParamCopyWith<$Res> {
-  __$$_PokemonDetailUseCaseParamCopyWithImpl(
-      _$_PokemonDetailUseCaseParam _value,
-      $Res Function(_$_PokemonDetailUseCaseParam) _then)
+        _$PokemonDetailUseCaseParamImpl>
+    implements _$$PokemonDetailUseCaseParamImplCopyWith<$Res> {
+  __$$PokemonDetailUseCaseParamImplCopyWithImpl(
+      _$PokemonDetailUseCaseParamImpl _value,
+      $Res Function(_$PokemonDetailUseCaseParamImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -84,7 +84,7 @@ class __$$_PokemonDetailUseCaseParamCopyWithImpl<$Res>
   $Res call({
     Object? pokemonId = null,
   }) {
-    return _then(_$_PokemonDetailUseCaseParam(
+    return _then(_$PokemonDetailUseCaseParamImpl(
       pokemonId: null == pokemonId
           ? _value.pokemonId
           : pokemonId // ignore: cast_nullable_to_non_nullable
@@ -95,8 +95,8 @@ class __$$_PokemonDetailUseCaseParamCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PokemonDetailUseCaseParam implements _PokemonDetailUseCaseParam {
-  _$_PokemonDetailUseCaseParam({required this.pokemonId});
+class _$PokemonDetailUseCaseParamImpl implements _PokemonDetailUseCaseParam {
+  _$PokemonDetailUseCaseParamImpl({required this.pokemonId});
 
   @override
   final int pokemonId;
@@ -107,10 +107,10 @@ class _$_PokemonDetailUseCaseParam implements _PokemonDetailUseCaseParam {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonDetailUseCaseParam &&
+            other is _$PokemonDetailUseCaseParamImpl &&
             (identical(other.pokemonId, pokemonId) ||
                 other.pokemonId == pokemonId));
   }
@@ -121,19 +121,19 @@ class _$_PokemonDetailUseCaseParam implements _PokemonDetailUseCaseParam {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonDetailUseCaseParamCopyWith<_$_PokemonDetailUseCaseParam>
-      get copyWith => __$$_PokemonDetailUseCaseParamCopyWithImpl<
-          _$_PokemonDetailUseCaseParam>(this, _$identity);
+  _$$PokemonDetailUseCaseParamImplCopyWith<_$PokemonDetailUseCaseParamImpl>
+      get copyWith => __$$PokemonDetailUseCaseParamImplCopyWithImpl<
+          _$PokemonDetailUseCaseParamImpl>(this, _$identity);
 }
 
 abstract class _PokemonDetailUseCaseParam implements PokemonDetailUseCaseParam {
   factory _PokemonDetailUseCaseParam({required final int pokemonId}) =
-      _$_PokemonDetailUseCaseParam;
+      _$PokemonDetailUseCaseParamImpl;
 
   @override
   int get pokemonId;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonDetailUseCaseParamCopyWith<_$_PokemonDetailUseCaseParam>
+  _$$PokemonDetailUseCaseParamImplCopyWith<_$PokemonDetailUseCaseParamImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

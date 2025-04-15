@@ -12,7 +12,7 @@ part of 'pokemon.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PokemonListResponse _$PokemonListResponseFromJson(Map<String, dynamic> json) {
   return _PokemonListResponse.fromJson(json);
@@ -63,22 +63,22 @@ class _$PokemonListResponseCopyWithImpl<$Res, $Val extends PokemonListResponse>
 }
 
 /// @nodoc
-abstract class _$$_PokemonListResponseCopyWith<$Res>
+abstract class _$$PokemonListResponseImplCopyWith<$Res>
     implements $PokemonListResponseCopyWith<$Res> {
-  factory _$$_PokemonListResponseCopyWith(_$_PokemonListResponse value,
-          $Res Function(_$_PokemonListResponse) then) =
-      __$$_PokemonListResponseCopyWithImpl<$Res>;
+  factory _$$PokemonListResponseImplCopyWith(_$PokemonListResponseImpl value,
+          $Res Function(_$PokemonListResponseImpl) then) =
+      __$$PokemonListResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<PokemonListResultResponse> results});
 }
 
 /// @nodoc
-class __$$_PokemonListResponseCopyWithImpl<$Res>
-    extends _$PokemonListResponseCopyWithImpl<$Res, _$_PokemonListResponse>
-    implements _$$_PokemonListResponseCopyWith<$Res> {
-  __$$_PokemonListResponseCopyWithImpl(_$_PokemonListResponse _value,
-      $Res Function(_$_PokemonListResponse) _then)
+class __$$PokemonListResponseImplCopyWithImpl<$Res>
+    extends _$PokemonListResponseCopyWithImpl<$Res, _$PokemonListResponseImpl>
+    implements _$$PokemonListResponseImplCopyWith<$Res> {
+  __$$PokemonListResponseImplCopyWithImpl(_$PokemonListResponseImpl _value,
+      $Res Function(_$PokemonListResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +86,7 @@ class __$$_PokemonListResponseCopyWithImpl<$Res>
   $Res call({
     Object? results = null,
   }) {
-    return _then(_$_PokemonListResponse(
+    return _then(_$PokemonListResponseImpl(
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
@@ -97,15 +97,15 @@ class __$$_PokemonListResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PokemonListResponse
+class _$PokemonListResponseImpl
     with DiagnosticableTreeMixin
     implements _PokemonListResponse {
-  _$_PokemonListResponse(
+  _$PokemonListResponseImpl(
       {required final List<PokemonListResultResponse> results})
       : _results = results;
 
-  factory _$_PokemonListResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PokemonListResponseFromJson(json);
+  factory _$PokemonListResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PokemonListResponseImplFromJson(json);
 
   final List<PokemonListResultResponse> _results;
   @override
@@ -129,10 +129,10 @@ class _$_PokemonListResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonListResponse &&
+            other is _$PokemonListResponseImpl &&
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
@@ -144,13 +144,13 @@ class _$_PokemonListResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonListResponseCopyWith<_$_PokemonListResponse> get copyWith =>
-      __$$_PokemonListResponseCopyWithImpl<_$_PokemonListResponse>(
+  _$$PokemonListResponseImplCopyWith<_$PokemonListResponseImpl> get copyWith =>
+      __$$PokemonListResponseImplCopyWithImpl<_$PokemonListResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PokemonListResponseToJson(
+    return _$$PokemonListResponseImplToJson(
       this,
     );
   }
@@ -159,16 +159,16 @@ class _$_PokemonListResponse
 abstract class _PokemonListResponse implements PokemonListResponse {
   factory _PokemonListResponse(
           {required final List<PokemonListResultResponse> results}) =
-      _$_PokemonListResponse;
+      _$PokemonListResponseImpl;
 
   factory _PokemonListResponse.fromJson(Map<String, dynamic> json) =
-      _$_PokemonListResponse.fromJson;
+      _$PokemonListResponseImpl.fromJson;
 
   @override
   List<PokemonListResultResponse> get results;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonListResponseCopyWith<_$_PokemonListResponse> get copyWith =>
+  _$$PokemonListResponseImplCopyWith<_$PokemonListResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -228,25 +228,25 @@ class _$PokemonListResultResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PokemonListResultResponseCopyWith<$Res>
+abstract class _$$PokemonListResultResponseImplCopyWith<$Res>
     implements $PokemonListResultResponseCopyWith<$Res> {
-  factory _$$_PokemonListResultResponseCopyWith(
-          _$_PokemonListResultResponse value,
-          $Res Function(_$_PokemonListResultResponse) then) =
-      __$$_PokemonListResultResponseCopyWithImpl<$Res>;
+  factory _$$PokemonListResultResponseImplCopyWith(
+          _$PokemonListResultResponseImpl value,
+          $Res Function(_$PokemonListResultResponseImpl) then) =
+      __$$PokemonListResultResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String url});
 }
 
 /// @nodoc
-class __$$_PokemonListResultResponseCopyWithImpl<$Res>
+class __$$PokemonListResultResponseImplCopyWithImpl<$Res>
     extends _$PokemonListResultResponseCopyWithImpl<$Res,
-        _$_PokemonListResultResponse>
-    implements _$$_PokemonListResultResponseCopyWith<$Res> {
-  __$$_PokemonListResultResponseCopyWithImpl(
-      _$_PokemonListResultResponse _value,
-      $Res Function(_$_PokemonListResultResponse) _then)
+        _$PokemonListResultResponseImpl>
+    implements _$$PokemonListResultResponseImplCopyWith<$Res> {
+  __$$PokemonListResultResponseImplCopyWithImpl(
+      _$PokemonListResultResponseImpl _value,
+      $Res Function(_$PokemonListResultResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -255,7 +255,7 @@ class __$$_PokemonListResultResponseCopyWithImpl<$Res>
     Object? name = null,
     Object? url = null,
   }) {
-    return _then(_$_PokemonListResultResponse(
+    return _then(_$PokemonListResultResponseImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -270,13 +270,13 @@ class __$$_PokemonListResultResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PokemonListResultResponse
+class _$PokemonListResultResponseImpl
     with DiagnosticableTreeMixin
     implements _PokemonListResultResponse {
-  _$_PokemonListResultResponse({required this.name, required this.url});
+  _$PokemonListResultResponseImpl({required this.name, required this.url});
 
-  factory _$_PokemonListResultResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PokemonListResultResponseFromJson(json);
+  factory _$PokemonListResultResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PokemonListResultResponseImplFromJson(json);
 
   @override
   final String name;
@@ -298,10 +298,10 @@ class _$_PokemonListResultResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonListResultResponse &&
+            other is _$PokemonListResultResponseImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url));
   }
@@ -313,13 +313,13 @@ class _$_PokemonListResultResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonListResultResponseCopyWith<_$_PokemonListResultResponse>
-      get copyWith => __$$_PokemonListResultResponseCopyWithImpl<
-          _$_PokemonListResultResponse>(this, _$identity);
+  _$$PokemonListResultResponseImplCopyWith<_$PokemonListResultResponseImpl>
+      get copyWith => __$$PokemonListResultResponseImplCopyWithImpl<
+          _$PokemonListResultResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PokemonListResultResponseToJson(
+    return _$$PokemonListResultResponseImplToJson(
       this,
     );
   }
@@ -328,10 +328,10 @@ class _$_PokemonListResultResponse
 abstract class _PokemonListResultResponse implements PokemonListResultResponse {
   factory _PokemonListResultResponse(
       {required final String name,
-      required final String url}) = _$_PokemonListResultResponse;
+      required final String url}) = _$PokemonListResultResponseImpl;
 
   factory _PokemonListResultResponse.fromJson(Map<String, dynamic> json) =
-      _$_PokemonListResultResponse.fromJson;
+      _$PokemonListResultResponseImpl.fromJson;
 
   @override
   String get name;
@@ -339,7 +339,7 @@ abstract class _PokemonListResultResponse implements PokemonListResultResponse {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonListResultResponseCopyWith<_$_PokemonListResultResponse>
+  _$$PokemonListResultResponseImplCopyWith<_$PokemonListResultResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -432,11 +432,12 @@ class _$PokemonDetailResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PokemonDetailResponseCopyWith<$Res>
+abstract class _$$PokemonDetailResponseImplCopyWith<$Res>
     implements $PokemonDetailResponseCopyWith<$Res> {
-  factory _$$_PokemonDetailResponseCopyWith(_$_PokemonDetailResponse value,
-          $Res Function(_$_PokemonDetailResponse) then) =
-      __$$_PokemonDetailResponseCopyWithImpl<$Res>;
+  factory _$$PokemonDetailResponseImplCopyWith(
+          _$PokemonDetailResponseImpl value,
+          $Res Function(_$PokemonDetailResponseImpl) then) =
+      __$$PokemonDetailResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -451,11 +452,12 @@ abstract class _$$_PokemonDetailResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PokemonDetailResponseCopyWithImpl<$Res>
-    extends _$PokemonDetailResponseCopyWithImpl<$Res, _$_PokemonDetailResponse>
-    implements _$$_PokemonDetailResponseCopyWith<$Res> {
-  __$$_PokemonDetailResponseCopyWithImpl(_$_PokemonDetailResponse _value,
-      $Res Function(_$_PokemonDetailResponse) _then)
+class __$$PokemonDetailResponseImplCopyWithImpl<$Res>
+    extends _$PokemonDetailResponseCopyWithImpl<$Res,
+        _$PokemonDetailResponseImpl>
+    implements _$$PokemonDetailResponseImplCopyWith<$Res> {
+  __$$PokemonDetailResponseImplCopyWithImpl(_$PokemonDetailResponseImpl _value,
+      $Res Function(_$PokemonDetailResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -467,7 +469,7 @@ class __$$_PokemonDetailResponseCopyWithImpl<$Res>
     Object? weight = null,
     Object? sprites = null,
   }) {
-    return _then(_$_PokemonDetailResponse(
+    return _then(_$PokemonDetailResponseImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -494,18 +496,18 @@ class __$$_PokemonDetailResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PokemonDetailResponse
+class _$PokemonDetailResponseImpl
     with DiagnosticableTreeMixin
     implements _PokemonDetailResponse {
-  _$_PokemonDetailResponse(
+  _$PokemonDetailResponseImpl(
       {required this.id,
       required this.name,
       required this.height,
       required this.weight,
       required this.sprites});
 
-  factory _$_PokemonDetailResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PokemonDetailResponseFromJson(json);
+  factory _$PokemonDetailResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PokemonDetailResponseImplFromJson(json);
 
   @override
   final int id;
@@ -536,10 +538,10 @@ class _$_PokemonDetailResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonDetailResponse &&
+            other is _$PokemonDetailResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.height, height) || other.height == height) &&
@@ -555,13 +557,13 @@ class _$_PokemonDetailResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonDetailResponseCopyWith<_$_PokemonDetailResponse> get copyWith =>
-      __$$_PokemonDetailResponseCopyWithImpl<_$_PokemonDetailResponse>(
-          this, _$identity);
+  _$$PokemonDetailResponseImplCopyWith<_$PokemonDetailResponseImpl>
+      get copyWith => __$$PokemonDetailResponseImplCopyWithImpl<
+          _$PokemonDetailResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PokemonDetailResponseToJson(
+    return _$$PokemonDetailResponseImplToJson(
       this,
     );
   }
@@ -574,10 +576,10 @@ abstract class _PokemonDetailResponse implements PokemonDetailResponse {
           required final int height,
           required final int weight,
           required final PokemonDetailSpriteResponse sprites}) =
-      _$_PokemonDetailResponse;
+      _$PokemonDetailResponseImpl;
 
   factory _PokemonDetailResponse.fromJson(Map<String, dynamic> json) =
-      _$_PokemonDetailResponse.fromJson;
+      _$PokemonDetailResponseImpl.fromJson;
 
   @override
   int get id;
@@ -591,8 +593,8 @@ abstract class _PokemonDetailResponse implements PokemonDetailResponse {
   PokemonDetailSpriteResponse get sprites;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonDetailResponseCopyWith<_$_PokemonDetailResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PokemonDetailResponseImplCopyWith<_$PokemonDetailResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 PokemonDetailSpriteResponse _$PokemonDetailSpriteResponseFromJson(
@@ -648,25 +650,25 @@ class _$PokemonDetailSpriteResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PokemonDetailSpriteResponseCopyWith<$Res>
+abstract class _$$PokemonDetailSpriteResponseImplCopyWith<$Res>
     implements $PokemonDetailSpriteResponseCopyWith<$Res> {
-  factory _$$_PokemonDetailSpriteResponseCopyWith(
-          _$_PokemonDetailSpriteResponse value,
-          $Res Function(_$_PokemonDetailSpriteResponse) then) =
-      __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>;
+  factory _$$PokemonDetailSpriteResponseImplCopyWith(
+          _$PokemonDetailSpriteResponseImpl value,
+          $Res Function(_$PokemonDetailSpriteResponseImpl) then) =
+      __$$PokemonDetailSpriteResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, Map<String, String?>> other});
 }
 
 /// @nodoc
-class __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>
+class __$$PokemonDetailSpriteResponseImplCopyWithImpl<$Res>
     extends _$PokemonDetailSpriteResponseCopyWithImpl<$Res,
-        _$_PokemonDetailSpriteResponse>
-    implements _$$_PokemonDetailSpriteResponseCopyWith<$Res> {
-  __$$_PokemonDetailSpriteResponseCopyWithImpl(
-      _$_PokemonDetailSpriteResponse _value,
-      $Res Function(_$_PokemonDetailSpriteResponse) _then)
+        _$PokemonDetailSpriteResponseImpl>
+    implements _$$PokemonDetailSpriteResponseImplCopyWith<$Res> {
+  __$$PokemonDetailSpriteResponseImplCopyWithImpl(
+      _$PokemonDetailSpriteResponseImpl _value,
+      $Res Function(_$PokemonDetailSpriteResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -674,7 +676,7 @@ class __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>
   $Res call({
     Object? other = null,
   }) {
-    return _then(_$_PokemonDetailSpriteResponse(
+    return _then(_$PokemonDetailSpriteResponseImpl(
       other: null == other
           ? _value._other
           : other // ignore: cast_nullable_to_non_nullable
@@ -685,15 +687,16 @@ class __$$_PokemonDetailSpriteResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PokemonDetailSpriteResponse
+class _$PokemonDetailSpriteResponseImpl
     with DiagnosticableTreeMixin
     implements _PokemonDetailSpriteResponse {
-  _$_PokemonDetailSpriteResponse(
+  _$PokemonDetailSpriteResponseImpl(
       {required final Map<String, Map<String, String?>> other})
       : _other = other;
 
-  factory _$_PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_PokemonDetailSpriteResponseFromJson(json);
+  factory _$PokemonDetailSpriteResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$PokemonDetailSpriteResponseImplFromJson(json);
 
   final Map<String, Map<String, String?>> _other;
   @override
@@ -717,10 +720,10 @@ class _$_PokemonDetailSpriteResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonDetailSpriteResponse &&
+            other is _$PokemonDetailSpriteResponseImpl &&
             const DeepCollectionEquality().equals(other._other, this._other));
   }
 
@@ -732,13 +735,13 @@ class _$_PokemonDetailSpriteResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonDetailSpriteResponseCopyWith<_$_PokemonDetailSpriteResponse>
-      get copyWith => __$$_PokemonDetailSpriteResponseCopyWithImpl<
-          _$_PokemonDetailSpriteResponse>(this, _$identity);
+  _$$PokemonDetailSpriteResponseImplCopyWith<_$PokemonDetailSpriteResponseImpl>
+      get copyWith => __$$PokemonDetailSpriteResponseImplCopyWithImpl<
+          _$PokemonDetailSpriteResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PokemonDetailSpriteResponseToJson(
+    return _$$PokemonDetailSpriteResponseImplToJson(
       this,
     );
   }
@@ -748,15 +751,15 @@ abstract class _PokemonDetailSpriteResponse
     implements PokemonDetailSpriteResponse {
   factory _PokemonDetailSpriteResponse(
           {required final Map<String, Map<String, String?>> other}) =
-      _$_PokemonDetailSpriteResponse;
+      _$PokemonDetailSpriteResponseImpl;
 
   factory _PokemonDetailSpriteResponse.fromJson(Map<String, dynamic> json) =
-      _$_PokemonDetailSpriteResponse.fromJson;
+      _$PokemonDetailSpriteResponseImpl.fromJson;
 
   @override
   Map<String, Map<String, String?>> get other;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonDetailSpriteResponseCopyWith<_$_PokemonDetailSpriteResponse>
+  _$$PokemonDetailSpriteResponseImplCopyWith<_$PokemonDetailSpriteResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

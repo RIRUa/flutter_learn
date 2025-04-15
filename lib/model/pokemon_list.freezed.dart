@@ -12,7 +12,7 @@ part of 'pokemon_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PokemonNameAndUrl {
@@ -63,22 +63,22 @@ class _$PokemonNameAndUrlCopyWithImpl<$Res, $Val extends PokemonNameAndUrl>
 }
 
 /// @nodoc
-abstract class _$$_PokemonNameAndUrlCopyWith<$Res>
+abstract class _$$PokemonNameAndUrlImplCopyWith<$Res>
     implements $PokemonNameAndUrlCopyWith<$Res> {
-  factory _$$_PokemonNameAndUrlCopyWith(_$_PokemonNameAndUrl value,
-          $Res Function(_$_PokemonNameAndUrl) then) =
-      __$$_PokemonNameAndUrlCopyWithImpl<$Res>;
+  factory _$$PokemonNameAndUrlImplCopyWith(_$PokemonNameAndUrlImpl value,
+          $Res Function(_$PokemonNameAndUrlImpl) then) =
+      __$$PokemonNameAndUrlImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String url});
 }
 
 /// @nodoc
-class __$$_PokemonNameAndUrlCopyWithImpl<$Res>
-    extends _$PokemonNameAndUrlCopyWithImpl<$Res, _$_PokemonNameAndUrl>
-    implements _$$_PokemonNameAndUrlCopyWith<$Res> {
-  __$$_PokemonNameAndUrlCopyWithImpl(
-      _$_PokemonNameAndUrl _value, $Res Function(_$_PokemonNameAndUrl) _then)
+class __$$PokemonNameAndUrlImplCopyWithImpl<$Res>
+    extends _$PokemonNameAndUrlCopyWithImpl<$Res, _$PokemonNameAndUrlImpl>
+    implements _$$PokemonNameAndUrlImplCopyWith<$Res> {
+  __$$PokemonNameAndUrlImplCopyWithImpl(_$PokemonNameAndUrlImpl _value,
+      $Res Function(_$PokemonNameAndUrlImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_PokemonNameAndUrlCopyWithImpl<$Res>
     Object? name = null,
     Object? url = null,
   }) {
-    return _then(_$_PokemonNameAndUrl(
+    return _then(_$PokemonNameAndUrlImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -102,8 +102,8 @@ class __$$_PokemonNameAndUrlCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PokemonNameAndUrl implements _PokemonNameAndUrl {
-  const _$_PokemonNameAndUrl({required this.name, required this.url});
+class _$PokemonNameAndUrlImpl implements _PokemonNameAndUrl {
+  const _$PokemonNameAndUrlImpl({required this.name, required this.url});
 
   @override
   final String name;
@@ -116,10 +116,10 @@ class _$_PokemonNameAndUrl implements _PokemonNameAndUrl {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PokemonNameAndUrl &&
+            other is _$PokemonNameAndUrlImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url));
   }
@@ -130,15 +130,15 @@ class _$_PokemonNameAndUrl implements _PokemonNameAndUrl {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PokemonNameAndUrlCopyWith<_$_PokemonNameAndUrl> get copyWith =>
-      __$$_PokemonNameAndUrlCopyWithImpl<_$_PokemonNameAndUrl>(
+  _$$PokemonNameAndUrlImplCopyWith<_$PokemonNameAndUrlImpl> get copyWith =>
+      __$$PokemonNameAndUrlImplCopyWithImpl<_$PokemonNameAndUrlImpl>(
           this, _$identity);
 }
 
 abstract class _PokemonNameAndUrl implements PokemonNameAndUrl {
   const factory _PokemonNameAndUrl(
       {required final String name,
-      required final String url}) = _$_PokemonNameAndUrl;
+      required final String url}) = _$PokemonNameAndUrlImpl;
 
   @override
   String get name;
@@ -146,6 +146,6 @@ abstract class _PokemonNameAndUrl implements PokemonNameAndUrl {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_PokemonNameAndUrlCopyWith<_$_PokemonNameAndUrl> get copyWith =>
+  _$$PokemonNameAndUrlImplCopyWith<_$PokemonNameAndUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
