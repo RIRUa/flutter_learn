@@ -137,14 +137,15 @@ class __$$PokemonDetailImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PokemonDetailImpl implements _PokemonDetail {
+class _$PokemonDetailImpl extends _PokemonDetail {
   const _$PokemonDetailImpl(
       {required this.id,
       required this.name,
       required this.height,
       required this.weight,
       required final List<String> imagePaths})
-      : _imagePaths = imagePaths;
+      : _imagePaths = imagePaths,
+        super._();
 
   @override
   final int id;
@@ -191,13 +192,14 @@ class _$PokemonDetailImpl implements _PokemonDetail {
       __$$PokemonDetailImplCopyWithImpl<_$PokemonDetailImpl>(this, _$identity);
 }
 
-abstract class _PokemonDetail implements PokemonDetail {
+abstract class _PokemonDetail extends PokemonDetail {
   const factory _PokemonDetail(
       {required final int id,
       required final String name,
       required final int height,
       required final int weight,
       required final List<String> imagePaths}) = _$PokemonDetailImpl;
+  const _PokemonDetail._() : super._();
 
   @override
   int get id;
